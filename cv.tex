@@ -1,5 +1,6 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
+\usepackage[regular,solid,brands]{fontawesome5} % enable brand icons
 %A Few Useful Packages
 \usepackage{marvosym}
 \usepackage{fontspec} 					%for loading fonts
@@ -71,15 +72,11 @@ ItalicFont = Fontin-Italic.otf
 %	\end{textblock}
 %}
 \newcommand{\contacta}[2]{
-    #1 {\large\textperiodcentered} #2 {\large}
+    #1 {\large \;|\;} #2 {\large}
 }
 \newcommand{\contactb}[3]{
     #1 {\large\textperiodcentered} #2 {\large\textperiodcentered} #3
     {\Large}
-}
-
-\newcommand{\contactc}[1]{
-    #1{\large}
 }
 
 \pagestyle{empty} % non-numbered pages
@@ -91,9 +88,9 @@ ItalicFont = Fontin-Italic.otf
 		{\huge\textsc{Abhinav Kharbanda (Nav)}
 	}\\}
 \centering{
-\contactb{USA}{EU}{+1 (857)-800-3858}\\
+\contactb{Madrid}{Spain}{+34 (611)-263-952‬}\\
 
-\contacta{\href{https://www.linkedin.com/in/nav-kharbanda}{www.linkedin.com/in/nav-kharbanda}}{\href{mailto:sayhi@navbuilt.me}{sayhi@navbuilt.me}}}
+\contacta{\href{https://www.linkedin.com/in/nav-kharbanda}{\faLinkedin\; nav-kharbanda}}{\;\href{mailto:sayhi@navbuilt.me}{sayhi@navbuilt.me}}}
 
 %--------------------SECTIONS-----------------------------------
 %---------------------------------------------------------------
@@ -104,9 +101,7 @@ ItalicFont = Fontin-Italic.otf
 %----------------------------
 \begin{flushleft}
 \justifying{
-Engineer \& ex-Product Manager with a history of driving significant impact (\textbf{\$310M+ iGTV, \$260M+ annual savings}). 
-\\ Now actively exploring innovative Product Engineer roles intersecting engineering, art, \& design.
-}
+Engineer \& former PM with 8+ years building scalable systems and high-impact platform features driving \textbf{\$570M+} in business impact. Now exploring experimental roles at the intersection of engineering and design.}
 \end{flushleft}
 \vspace{1mm}
 
@@ -119,12 +114,13 @@ Engineer \& ex-Product Manager with a history of driving significant impact (\te
 \section{Work Experience}
 \vspace{-1mm}
 \hskip-0.3em
+
 %----------------------------
-\begin{flushleft}\textbf{Hunter College (CUNY) \& MakeInspires, New York, NY}
+\begin{flushleft}\textbf{BankNYou, New Delhi, India}
 \vspace{0.5mm}
 
 \begin{tabular}{r|p{16.3cm}}
-\hspace{-1mm}\textsc{Mar 2024 -} & \textsc{\underline{Sabbatical: Art \& Community Engagement}} \\
+\hspace{-1mm}\textsc{Sept 2025 -} & \textsc{\underline{Product Innovation Engineer (R\&D)}} \\
 \hspace{-1mm}\textsc{Present} &
 
 \vspace{1.2mm}
@@ -133,14 +129,15 @@ Engineer \& ex-Product Manager with a history of driving significant impact (\te
 \justifying
 \vspace{-2.5mm}
   \item \justifying\footnotesize{
-  Deepened expertise in interactive sculpture, digital fabrication, \& CAD/CAM (Fusion360, TinkerCAD) through Hunter College coursework and hands-on creation of sculptural works.
+  Prototyping new payment interaction models across emerging device formats (QR soundboxes, NFC tap-to-phone, low-cost POS terminals) to explore next-gen merchant experiences.
   }
-  \item \justifying\footnotesize{
-  Volunteered at a makerspace, teaching 3D printing \& woodworking to 6–11 year olds.
-  }
-  \item \justifying\footnotesize{
-  Recharged \& gained new perspectives on creative problem-solving and interdisciplinary innovation.
-  }
+  \item \justifying\footnotesize{Building early-stage test rigs using ESP32, Arduino, and Raspberry Pi to simulate offline QR \& UPI flows and latency-sensitive confirmations in low-connectivity environments.}
+ % \item \justifying\footnotesize{
+ % Volunteered at a makerspace, teaching 3D printing \& woodworking to 6–11 year olds.
+ % }
+ % \item \justifying\footnotesize{
+ % Recharged \& gained new perspectives on creative problem-solving and interdisciplinary innovation.
+ % }
    %\item \footnotesize{\textit{Technologies Used: NodeJS, AngularJS, RxJS, Javascript, Cassandra}} 
     \vspace*{-\baselineskip}
 
@@ -150,29 +147,69 @@ Engineer \& ex-Product Manager with a history of driving significant impact (\te
   \\\multicolumn{2}{c}{} \\
 \end{tabular}
 \end{flushleft}
+
+%----------------------------
+\vspace{-2mm}
+\begin{flushleft}\textbf{City University of New York (Hunter College), New York, USA}
+\vspace{0.5mm}
+
+\begin{tabular}{r|p{16.3cm}}
+\hspace{-1.2mm}\textsc{Mar 2024 -} & \textsc{\underline{Independent Sculpture, Prototyping \& Fabrication}} \\
+\hspace{-1mm}\textsc{Sept 2025} &
+
+\vspace{1.2mm}
+{\setstretch{1.15}
+\begin{itemize}[leftmargin=*]
+\justifying
+\vspace{-2.5mm}
+  \item \justifying\footnotesize{
+  Briefly enrolled in Hunter College’s Interactive Sculpture program to deepen expertise in interactive sculpture, digital fabrication, \& CAD/CAM tooling.
+  }
+  \item \justifying\footnotesize{Built physical prototypes using 3D printing, CNC, and mixed material processes.}
+ % \item \justifying\footnotesize{
+ % Volunteered at a makerspace, teaching 3D printing \& woodworking to 6–11 year olds.
+ % }
+ % \item \justifying\footnotesize{
+ % Recharged \& gained new perspectives on creative problem-solving and interdisciplinary innovation.
+ % }
+   %\item \footnotesize{\textit{Technologies Used: NodeJS, AngularJS, RxJS, Javascript, Cassandra}} 
+    \vspace*{-\baselineskip}
+
+  \end{itemize}
+  
+  }
+  \\\multicolumn{2}{c}{} \\
+\end{tabular}
+\end{flushleft}
+
+
 %--------------------------------------------
 \vspace{-2mm}
-\begin{flushleft}\textbf{Instacart, New York, NY}
+\begin{flushleft}\textbf{Instacart, New York, USA}
 \vspace{0.5mm}
 
 \begin{tabular}{r|p{16.3cm}}
 
-\textsc{Jan 2021 -} & \textsc{\underline{Product Manager - Partnerships, Fraud \& Help}}  
-\\\textsc{Feb 2024} & 
-
+\hspace{-1mm}\textsc{Jan 2022 -} & \textsc{\underline{Product Manager - New Verticals \& Fraud}}  \\
+\hspace{-1mm}\textsc{Feb 2024} & 
 \vspace{-1.6mm}
 
 {\setstretch{1.15}
 
 \justifying
- \begin{itemize}[leftmargin=5.5mm]
+ \begin{itemize}[leftmargin=*]
   \item \justifying\footnotesize{
-   Drove \textbf{\$310M+} incremental gross transaction volume (iGTV) by creating long-term partnership strategies and leading major vendor implementations (Chase, Mastercard, Costco, Paypal).
+  Led major vendor integrations (Chase, Mastercard, Costco, PayPal) and designed partnership strategies that unlocked \textbf{\$310M+} in incremental gross transaction volume (iGTV).
   }
    \item \justifying\footnotesize{
-   Spearheaded the product roadmap of the Marketplace Tools team \& built a reusable partnership platform, reducing new partnership \& offer launch time from 90 days to \textbf{<6 days}.
+   Developed roadmap and early-stage prototypes for partnership tools, enabling rapid validation of new launches with internal and external stakeholders.
+   
+   %Spearheaded the product roadmap of the Marketplace Tools team \& built a reusable partnership platform, reducing new partnership \& offer launch time from \textbf{90 days} to \textbf{<6 days}.
   }  
-  \item \justifying\footnotesize{Built a 2-year product vision for Shopper Help, introducing the "Quality of Contact" metric (18\% decrease in support call volume) and implementing in-context solutions that increased shopper satisfaction by 7\%.}
+
+   \item \justifying\footnotesize{
+   Built the initial prototype for Instacart’s first ML-driven fraud detection and transaction validation system;  later scaled into core infrastructure preventing \textbf{\$260M+} in fraud loss.
+  }
   
 \vspace*{-0.3\baselineskip}
 
@@ -190,12 +227,14 @@ Engineer \& ex-Product Manager with a history of driving significant impact (\te
 \begin{itemize}[leftmargin=*]
 \justifying
   \item \justifying\footnotesize{
-  Architected and built the foundational fraud detection system at Instacart, resulting in \textbf{\$260M+} in savings.
-  }
-
-  \item \justifying\footnotesize{Designed \& collaborated with XFN partners to streamline fraud/appeal reviews, cutting manual review time from 16 mins to 48 secs, saving Instacart \textbf{\$220M} annually.}
+  Designed internal dispute resolution and fraud review workflows that reduced decisioning latency from \textbf{16 minutes} to \textbf{under a minute}, later formalized as the company’s primary appeals system.
   
-  \item \justifying\footnotesize{Drove solutions across 4 distinct workstreams (Fraud, Shopper Help, Workforce Manager, Tooling).}
+  %Designed \& collaborated with XFN partners to streamline fraud/appeal reviews, cutting manual review time from 16 mins to 48 secs, saving Instacart \textbf{\$220M} annually.}
+    }
+  \item \justifying\footnotesize{
+  Introduced an in-context support interaction prototype that informed long-term product direction and \\ reduced support dependency while improving user satisfaction.
+  }
+  %Engineered and implemented a 2-year product vision for Shopper Help, building in-context solutions that drove an \textbf{18\% decrease} in support call volume and a \textbf{7\% increase} in shopper satisfaction.}
 
  % \item \footnotesize{
  % Reduced compliance risk of Prop22 in California by leading a 3-person team, and delivering a legal and time-sensitive project 3 days before the expected timeline.
@@ -211,47 +250,22 @@ Engineer \& ex-Product Manager with a history of driving significant impact (\te
 \end{flushleft}
 %-------------------------------------
 \vspace{-2mm}
-\begin{flushleft}\textbf{Riivos Inc., San Francisco, CA}
-\vspace{0.5mm}
-
-\begin{tabular}{r|p{16.5cm}}
-\textsc{Jan 2018 -} & \textsc{\underline{Senior Software Engineer}}
-\\\textsc{Apr 2019} &
-
-\vspace{1.2mm}
-{\setstretch{1.15}
-\begin{itemize}[leftmargin=*]
-\justifying
-\vspace{-2.5mm}
- \item \justifying\footnotesize{Reduced Graph calculation \& formula generation time by 40\% and decreased front-end load times for Alight Sheets by 133\% through refactoring .}
-  \item \justifying\footnotesize{
-  Prioritized engineering backlog, delegated stories, mentored and code reviewed junior developers.}
-   %\item \footnotesize{\textit{Technologies Used: NodeJS, AngularJS, RxJS, Javascript, Cassandra}} 
-    \vspace*{-\baselineskip}
-
-  \end{itemize}
-  }
-  \\\multicolumn{2}{c}{} \\
-\end{tabular}
-\end{flushleft}
-%-------------------------------------
-\vspace{-2mm}
-\begin{flushleft}\textbf{IoT Open Innovation Lab at Northeastern University, Boston, MA}
+\begin{flushleft}\textbf{Riivos Inc., San Francisco, USA}
 \vspace{0.5mm}
 
 \begin{tabular}{r|p{16.3cm}}
-\textsc{Jan 2017 -} & \textsc{\underline{Senior Software Engineer \& Project Lead}}
-\\\textsc{Dec 2017} &
+\hspace{0.4mm}\textsc{Jan 2018 -} & \textsc{\underline{Senior Software Engineer}} \\
+\hspace{0.4mm}\textsc{Apr 2019} &
 
 \vspace{1.2mm}
 {\setstretch{1.15}
 \begin{itemize}[leftmargin=*]
 \justifying
 \vspace{-2.5mm}
-  \item \justifying\footnotesize{Led technical \& DevOps teams to build a large-scale enterprise IoT SaaS product, simultaneously cutting offshore costs by \textbf{40\%} through in-house module development.
-}
-  
-  \item \justifying\footnotesize{Streamlined project timelines by \textbf{4 months} by spearheading the migration from Waterfall to Scrum.}
+ \item \justifying\footnotesize{Reduced processing latency and front-end load times by 133\% for core SaaS product through iterative refactoring and prototype feature modules.}
+  \item \justifying\footnotesize{
+  Supported early-stage product experiments and mentoring junior engineers in agile workflows.}
+   %\item \footnotesize{\textit{Technologies Used: NodeJS, AngularJS, RxJS, Javascript, Cassandra}} 
     \vspace*{-\baselineskip}
 
   \end{itemize}
@@ -263,7 +277,7 @@ Engineer \& ex-Product Manager with a history of driving significant impact (\te
 \vspace{-1 em}
 \section{Education}
 \vspace{2mm}
-\hspace*{-4.5em}
+\hspace*{-4.2em}
 \hskip-1.9cm
 \begin{tabular}{r|p{13cm}}
 \textsc{May 2025} & {BA Candidate in} \textsc{Interactive Sculpture Art}
@@ -271,7 +285,7 @@ Engineer \& ex-Product Manager with a history of driving significant impact (\te
 & \textbf{City University of New York: Hunter College}, New York, NY\\\multicolumn{2}{c}{} \\
 \textsc{Dec 2018} & {Master of Science in} \textsc{Computer science}
 \\
-& \textbf{Northeastern University}, Boston, MA\\\multicolumn{2}{c}{}\\
+ & \textbf{Northeastern University}, Boston, MA\\\multicolumn{2}{c}{}\\
 %& \footnotesize{Related Courses: Networks, Circuit \& Signals, Embedded Design, Eng. Computation, Discrete Structures}\\
 
 
@@ -288,13 +302,12 @@ Engineer \& ex-Product Manager with a history of driving significant impact (\te
 \section{Skills}
 \vspace{2mm}
 \hskip-1.0em
-\hspace*{-1.9em}
+\hspace*{1em}
 \begin{tabular}{r|p{16cm}}
-\textsc{Fabrication} &\footnotesize{Sculpture, 3D Printing, Rapid Prototyping, Wood working, Metal working, Mold making} 
-\\\textsc{Design} &\footnotesize{Fusion360, Rhino 3D, Figma} 
-\\\textsc{Tools} &\footnotesize{Vibe Coding, Jira, Tableau, Sisense, Kanban, Git, Datadog} 
-\\\textsc{Languages} &\footnotesize{Ruby, Python, Java, NodeJS, Typescript, C++, SQL, HTML, CSS}
-\\\textsc{Frameworks} &\footnotesize{Rails, Express, GraphQL, Django, Flask}
+\textsc{AI} &\footnotesize{Vibe Coding, Gemini, Claude, OpenAI} 
+\\\textsc{Tech} &\footnotesize{Ruby, Python, NodeJS, TypeScript, C++, ESP32, Raspberry Pi, Arduino, Rails, Express, Django, Flask, GraphQL}
+\\\textsc{Tools} &\footnotesize{Git, AWS, GCP, Datadog, GraphQL, Jira, Tableau, Kanban} 
+\\\textsc{Design} &\footnotesize{Fusion360, Rhino, Figma, 3D Printing, CNC, Mold Making, Woodworking} 
 %\\\textsc{Cloud} &\footnotesize{Amazon Web Services, Firebase, Azure, Heroku}
 %\\\textsc{Environments} &\footnotesize{Linux, Windows, Android, Raspberry Pi, Arduino.}\\
 \end{tabular}
