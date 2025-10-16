@@ -1,6 +1,6 @@
 \documentclass[a4paper,10pt]{article}
 \usepackage[a4paper, total={6in, 8in}]{geometry}
-\usepackage[regular,solid,brands]{fontawesome5} % enable brand icons
+\usepackage{fontawesome5} % enable brand icons
 %A Few Useful Packages
 \usepackage{marvosym}
 \usepackage{fontspec} 					%for loading fonts
@@ -71,13 +71,11 @@ ItalicFont = Fontin-Italic.otf
 %	}
 %	\end{textblock}
 %}
-\newcommand{\contacta}[2]{
-    #1 {\large \;|\;} #2 {\large}
+\newcommand{\contacta}[4]{
+    #1 {\large \;|\;} #2 {\large \;|\;} #3 {\large \;|\;} #4 {\large}
 }
-\newcommand{\contactb}[3]{
-    #1 {\large\textperiodcentered} #2 {\large\textperiodcentered} #3
-    {\Large}
-}
+\newcommand{\contactb}[2]{
+    #1 {\large\textperiodcentered} #2 {\large}}
 
 \pagestyle{empty} % non-numbered pages
 
@@ -85,12 +83,19 @@ ItalicFont = Fontin-Italic.otf
 
 %--------------------TITLE-------------
 \par{\centering
-		{\huge\textsc{Abhinav Kharbanda (Nav)}
+		{\huge \textsc{Abhinav Kharbanda} \textbf{(Nav)}
 	}\\}
-\centering{
-\contactb{Madrid}{Spain}{+34 (611)-263-952‬}\\
 
-\contacta{\href{https://www.linkedin.com/in/nav-kharbanda}{\faLinkedin\; nav-kharbanda}}{\;\href{mailto:sayhi@navbuilt.me}{sayhi@navbuilt.me}}}
+\vspace{1.5mm}	
+\centering{
+
+\contactb{\faIcon{globe-americas}\;\;Madrid}{Spain}\\
+\vspace{1.5mm}	
+\contacta{\faIcon{mobile-alt}\;+34(611)-263-952}{\href{https://www.linkedin.com/in/nav-kharbanda}{\faLinkedin\; nav-kharbanda}}{\faEnvelope[regular]\;\href{mailto:sayhi@navbuilt.me}{sayhi@navbuilt.me}}{\faGithub\;\href{https://github.com/abhinavkh}{abhinavkh}}\\
+
+
+
+}
 
 %--------------------SECTIONS-----------------------------------
 %---------------------------------------------------------------
@@ -109,8 +114,6 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 
 %---------------------------------------------------------------
 \vspace{0.1 em}
-%Section: Education
-%Section: Research Experience 
 \section{Work Experience}
 \vspace{-1mm}
 \hskip-0.3em
@@ -139,12 +142,13 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
  % Recharged \& gained new perspectives on creative problem-solving and interdisciplinary innovation.
  % }
    %\item \footnotesize{\textit{Technologies Used: NodeJS, AngularJS, RxJS, Javascript, Cassandra}} 
-    \vspace*{-\baselineskip}
+    %\vspace*{-\baselineskip}
 
   \end{itemize}
   
   }
   \\\multicolumn{2}{c}{} \\
+	%\hline
 \end{tabular}
 \end{flushleft}
 
@@ -173,7 +177,7 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
  % Recharged \& gained new perspectives on creative problem-solving and interdisciplinary innovation.
  % }
    %\item \footnotesize{\textit{Technologies Used: NodeJS, AngularJS, RxJS, Javascript, Cassandra}} 
-    \vspace*{-\baselineskip}
+   % \vspace*{-\baselineskip}
 
   \end{itemize}
   
@@ -211,7 +215,7 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
    Built the initial prototype for Instacart’s first ML-driven fraud detection and transaction validation system;  later scaled into core infrastructure preventing \textbf{\$260M+} in fraud loss.
   }
   
-\vspace*{-0.3\baselineskip}
+\vspace*{0.5\baselineskip}
 
   \end{itemize}
   
@@ -242,7 +246,7 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 
    
    %\item \footnotesize{\textit{Technologies Used: Kendo UI, Javascript, NodeJS, AngularJS, RxJS, Chrome Developer Tools}} 
-  \vspace*{-\baselineskip}
+  %\vspace*{-\baselineskip}
   \end{itemize}
   }
   \\\multicolumn{2}{c}{} \\
@@ -266,7 +270,7 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
   \item \justifying\footnotesize{
   Supported early-stage product experiments and mentoring junior engineers in agile workflows.}
    %\item \footnotesize{\textit{Technologies Used: NodeJS, AngularJS, RxJS, Javascript, Cassandra}} 
-    \vspace*{-\baselineskip}
+   % \vspace*{-\baselineskip}
 
   \end{itemize}
   }
@@ -297,8 +301,7 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 
 %----------------------------------------------------------------------------------------
 
-\vspace{-0.6 em}
-%Section: Skills
+%\vspace{-0.6 em}
 \section{Skills}
 \vspace{2mm}
 \hskip-1.0em
