@@ -56,21 +56,6 @@ ItalicFont = Fontin-Italic.otf
 	\addtolength{\topmargin}{-.495in}
 	\addtolength{\textheight}{1.75in}
 
-%--------------------BEGIN DOCUMENT----------------------
-\begin{document}
-
-%WATERMARK TEST [**not part of a CV**]---------------
-%\font\wm=''Baskerville:color=787878'' at 8pt
-%\font\wmweb=''Baskerville:color=FF1493'' at 8pt
-%{\wm 
-%	\begin{textblock}{1}(0,0)
-%		\rotatebox{-90}{\parbox{500mm}{
-%			Typeset by Alessandro Plasmati with \XeTeX\  \today\ for 
-%			{\wmweb \href{http://www.aleplasmati.comuv.com}{aleplasmati.comuv.com}}
-%		}
-%	}
-%	\end{textblock}
-%}
 \newcommand{\contacta}[4]{
     #1 {\large \;|\;} #2 {\large \;|\;} #3 {\large \;|\;} #4 {\large}
 }
@@ -81,6 +66,33 @@ ItalicFont = Fontin-Italic.otf
 
 \font\fb=''[cmr10]'' %for use with \LaTeX command
 
+%-------------LOCALE SETUP---------------
+
+\newif\ifusa
+\ifdefined\USA
+  \usatrue
+\else
+  \usafalse % Spain version by default
+\fi
+
+\newcommand{\myphone}{%
+  \ifusa
+    +1 (857)-800-3858
+  \else
+    +34 (611)-263-952
+  \fi
+}
+
+%--------------------BEGIN DOCUMENT----------------------
+\begin{document}
+
+%------------------------------------------ 
+
+
+%-------------SETTING LOCALE---------------
+\usatrue
+%------------------------------------------ 
+
 %--------------------TITLE-------------
 \par{\centering
 		{\huge \textsc{Abhinav Kharbanda} \textbf{(Nav)}
@@ -89,9 +101,9 @@ ItalicFont = Fontin-Italic.otf
 \vspace{1.5mm}	
 \centering{
 
-\contactb{\faIcon{globe-americas}\;\;Madrid}{Spain}\\
+\contactb{\textcolor{gray!100}{\faIcon{globe-americas}\;\;Madrid}}{\textcolor{gray!100}{Spain}}\\
 \vspace{1.5mm}	
-\contacta{\faIcon{mobile-alt}\;+34(611)-263-952}{\href{https://www.linkedin.com/in/nav-kharbanda}{\faLinkedin\; nav-kharbanda}}{\faEnvelope[regular]\;\href{mailto:sayhi@navbuilt.me}{sayhi@navbuilt.me}}{\faGithub\;\href{https://github.com/abhinavkh}{abhinavkh}}\\
+\contacta{\faIcon{mobile-alt}\;\myphone}{\href{https://www.linkedin.com/in/nav-kharbanda}{\faLinkedin\;nav-kharbanda}}{\faEnvelope[regular]\;\href{mailto:sayhi@navbuilt.me}{sayhi@navbuilt.me}}{\faGithub\;\href{https://github.com/abhinavkh}{abhinavkh}}\\
 
 
 
@@ -108,18 +120,16 @@ ItalicFont = Fontin-Italic.otf
 \justifying{
 Engineer \& former PM with 8+ years building scalable systems and high-impact platform features driving \textbf{\$570M+} in business impact. Now exploring experimental roles at the intersection of engineering and design.}
 \end{flushleft}
-\vspace{1mm}
-
 
 
 %---------------------------------------------------------------
-\vspace{0.1 em}
+\vspace{1mm}
 \section{Work Experience}
-\vspace{-1mm}
+\vspace{-2mm}
 \hskip-0.3em
 
 %----------------------------
-\begin{flushleft}\textbf{BankNYou, New Delhi, India}
+\begin{flushleft}\textbf{BankNYou, Madrid, Spain}
 \vspace{0.5mm}
 
 \begin{tabular}{r|p{16.3cm}}
@@ -132,9 +142,11 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 \justifying
 \vspace{-2.5mm}
   \item \justifying\footnotesize{
-  Prototyping new payment interaction models across emerging device formats (QR soundboxes, NFC tap-to-phone, low-cost POS terminals) to explore next-gen merchant experiences.
+  Prototyping next-gen payment experiences across QR soundboxes, NFC tap-to-phone, and low-cost POS terminals, embedding lightweight ML heuristics to infer merchant intent and optimize transaction flow.
   }
-  \item \justifying\footnotesize{Building early-stage test rigs using ESP32, Arduino, and Raspberry Pi to simulate offline QR \& UPI flows and latency-sensitive confirmations in low-connectivity environments.}
+   \item \justifying\footnotesize{
+    Building test rigs using ESP32, Arduino, and Raspberry Pi to simulate QR/UPI flows and benchmark latency, error recovery, and confirmation reliability using on-device AI risk scoring in low-connectivity environments.
+  }
  % \item \justifying\footnotesize{
  % Volunteered at a makerspace, teaching 3D printing \& woodworking to 6–11 year olds.
  % }
@@ -153,7 +165,7 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 \end{flushleft}
 
 %----------------------------
-\vspace{-2mm}
+\vspace{-2.5mm}
 \begin{flushleft}\textbf{City University of New York (Hunter College), New York, USA}
 \vspace{0.5mm}
 
@@ -167,9 +179,9 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 \justifying
 \vspace{-2.5mm}
   \item \justifying\footnotesize{
-  Briefly enrolled in Hunter College’s Interactive Sculpture program to deepen expertise in interactive sculpture, digital fabrication, \& CAD/CAM tooling.
+  Briefly enrolled in Hunter College’s Interactive Sculpture program to deepen skills in interactive sculpture, digital fabrication, and CAD/CAM tooling.
   }
-  \item \justifying\footnotesize{Built physical prototypes using 3D printing, CNC, and mixed material processes.}
+  \item \justifying\footnotesize{Built physical prototypes using 3D printing, CNC, and mixed-material processes, exploring practical workflows for physical interaction and fabrication.}
  % \item \justifying\footnotesize{
  % Volunteered at a makerspace, teaching 3D printing \& woodworking to 6–11 year olds.
  % }
@@ -188,7 +200,7 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 
 
 %--------------------------------------------
-\vspace{-2mm}
+\vspace{-3mm}
 \begin{flushleft}\textbf{Instacart, New York, USA}
 \vspace{0.5mm}
 
@@ -202,18 +214,19 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 
 \justifying
  \begin{itemize}[leftmargin=*]
+ \item \justifying\footnotesize{
+   Built the initial prototype for Instacart’s first \textbf{ML-based} fraud detection and transaction validation system, later scaled into core infrastructure preventing \textbf{\$260M+} in fraud loss.
+  }
   \item \justifying\footnotesize{
-  Led major vendor integrations (Chase, Mastercard, Costco, PayPal) and designed partnership strategies that unlocked \textbf{\$310M+} in incremental gross transaction volume (iGTV).
+  Led strategic integrations with Chase, Mastercard, Costco, and PayPal, defining long-term partnership models and aligning legal, engineering, and ops to unlock \textbf{\$310M+} in incremental gross transaction volume (iGTV).
   }
    \item \justifying\footnotesize{
-   Developed roadmap and early-stage prototypes for partnership tools, enabling rapid validation of new launches with internal and external stakeholders.
+   Defined roadmap and built early prototypes for merchant and partner tooling, accelerating go-to-market cycles and reducing dependency on full engineering involvement during launch validation.
    
    %Spearheaded the product roadmap of the Marketplace Tools team \& built a reusable partnership platform, reducing new partnership \& offer launch time from \textbf{90 days} to \textbf{<6 days}.
   }  
 
-   \item \justifying\footnotesize{
-   Built the initial prototype for Instacart’s first ML-driven fraud detection and transaction validation system;  later scaled into core infrastructure preventing \textbf{\$260M+} in fraud loss.
-  }
+   
   
 \vspace*{0.5\baselineskip}
 
@@ -231,12 +244,12 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 \begin{itemize}[leftmargin=*]
 \justifying
   \item \justifying\footnotesize{
-  Designed internal dispute resolution and fraud review workflows that reduced decisioning latency from \textbf{16 minutes} to \textbf{under a minute}, later formalized as the company’s primary appeals system.
-  
+  Designed streamlined dispute resolution and fraud review workflows, cutting decision latency from \textbf{16 mins} to \textbf{under a minute} and establishing the foundation for Instacart’s primary appeals system.
+    
   %Designed \& collaborated with XFN partners to streamline fraud/appeal reviews, cutting manual review time from 16 mins to 48 secs, saving Instacart \textbf{\$220M} annually.}
     }
   \item \justifying\footnotesize{
-  Introduced an in-context support interaction prototype that informed long-term product direction and \\ reduced support dependency while improving user satisfaction.
+  Introduced an in-context support interaction flow that informed long-term product direction and reduced support dependency while improving user satisfaction.
   }
   %Engineered and implemented a 2-year product vision for Shopper Help, building in-context solutions that drove an \textbf{18\% decrease} in support call volume and a \textbf{7\% increase} in shopper satisfaction.}
 
@@ -252,8 +265,11 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
   \\\multicolumn{2}{c}{} \\
 \end{tabular}
 \end{flushleft}
+
+
+
 %-------------------------------------
-\vspace{-2mm}
+\vspace{-3mm}
 \begin{flushleft}\textbf{Riivos Inc., San Francisco, USA}
 \vspace{0.5mm}
 
@@ -266,9 +282,9 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 \begin{itemize}[leftmargin=*]
 \justifying
 \vspace{-2.5mm}
- \item \justifying\footnotesize{Reduced processing latency and front-end load times by 133\% for core SaaS product through iterative refactoring and prototype feature modules.}
+ \item \justifying\footnotesize{Reduced processing latency and front-end load times by 133\% for core SaaS product through iterative refactoring, introducing modular features, and performance profiling}
   \item \justifying\footnotesize{
-  Supported early-stage product experiments and mentoring junior engineers in agile workflows.}
+  Supported early-stage product experiments while mentoring junior engineers in agile workflows.}
    %\item \footnotesize{\textit{Technologies Used: NodeJS, AngularJS, RxJS, Javascript, Cassandra}} 
    % \vspace*{-\baselineskip}
 
@@ -278,7 +294,7 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 \end{tabular}
 \end{flushleft}
 %----------------------------------------------------------------------------------------
-\vspace{-1 em}
+\vspace{-1em}
 \section{Education}
 \vspace{2mm}
 \hspace*{-4.2em}
@@ -286,22 +302,23 @@ Engineer \& former PM with 8+ years building scalable systems and high-impact pl
 \begin{tabular}{r|p{13cm}}
 \textsc{May 2025} & {BA Candidate in} \textsc{Interactive Sculpture Art}
 \\
-& \textbf{City University of New York: Hunter College}, New York, NY\\\multicolumn{2}{c}{} \\
-\textsc{Dec 2018} & {Master of Science in} \textsc{Computer science}
-\\
- & \textbf{Northeastern University}, Boston, MA\\\multicolumn{2}{c}{}\\
+
+& \textbf{City University of New York: Hunter College}, New York, NY\\\multicolumn{2}{c}{} 
+\vspace{-0.2em}\\
+\textsc{Dec 2018} & {Master of Science in} \textsc{Computer science}\\
+ & \textbf{Northeastern University}, Boston, MA\\\multicolumn{2}{c}{}
+ 
+ \vspace{-0.2em}\\
 %& \footnotesize{Related Courses: Networks, Circuit \& Signals, Embedded Design, Eng. Computation, Discrete Structures}\\
 
-
-\textsc{May 2016} & {Bachelor of Science in} \textsc{Computer science and engineering}
-\\
+\textsc{May 2016} & {Bachelor of Science in} \textsc{Computer science and engineering}\\
 &\textbf{The NorthCap University}, Gurgaon, India
 %& \footnotesize{Related Courses: Networks, Circuit \& Signals, Embedded Design, Eng. Computation, Discrete Structures}\\
 \end{tabular}
 
-%----------------------------------------------------------------------------------------
+%----------------------------------------------------------------------------------
 
-%\vspace{-0.6 em}
+\vspace{-0.2 em}
 \section{Skills}
 \vspace{2mm}
 \hskip-1.0em
